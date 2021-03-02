@@ -10,7 +10,9 @@ import { Halaman2Component } from '../halaman2/halaman2.component';
 
 
 const ROUTES : Routes = [
-  {path : 'halaman2', component:Halaman2Component}
+  {path : 'halaman2', component:Halaman2Component},
+  {path : 'halaman2/:iNote', component:Halaman2Component}
+  
 ]
 
 @NgModule({

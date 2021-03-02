@@ -1,5 +1,6 @@
 import { Component, VERSION } from '@angular/core';
 import { Router } from '@angular/router';
+import { GlobalvarService } from '../globalvar.service';
 
 @Component({
   selector: 'my-app',
@@ -8,20 +9,29 @@ import { Router } from '@angular/router';
 })
 export class AppComponent  {
   name = ', Start to add note';
-  constructor(
+  
+ constructor(
     private router : Router
   ){}
-  judul = [];
-  isi = [];
-  tanggal = [];
+
+  namaglobal;
+
+  note = [
+    {judul:'',isi:'',tanggal:'',action:''}
+  ];
+
+  //judul = [];
+  //isi = [];
+  //tanggal = [];
   iJudul = '';
   iIsi = '';
   iTanggal = '';
+  iAction = '';
  
   ADDNOTE(){
-    this.judul.push(this.iJudul);
-    this.isi.push(this.iIsi);
-    this.tanggal.push(this.iTanggal);
-    //this.router.navigate(["/halaman2"]);
+    this.note.push({judul:this.iJudul,isi:this.iIsi,tanggal:this.iTanggal,action:'0'});
+  }
+  SAVE(){
+
   }
 }
