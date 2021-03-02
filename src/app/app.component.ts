@@ -11,11 +11,17 @@ export class AppComponent  {
   constructor(
     private router : Router
   ){}
-  judul = "";
-  isi = "";
-  tanggal = "";
+  judul = [];
+  isi = [];
+  tanggal = [];
+  iJudul = '';
+  iIsi = '';
+  iTanggal = '';
  
   ADDNOTE(){
-     this.router.navigate(["/halaman2"]);
+    this.judul.push(this.iJudul);
+    this.isi.push(this.iIsi);
+    this.tanggal.push(this.iTanggal);
+    //this.router.navigate(["/halaman2"]);
   }
 }

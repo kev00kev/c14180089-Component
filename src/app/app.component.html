@@ -1,11 +1,30 @@
 <hello name="{{ name }}"></hello>
-<p>
+
   <br>
-    Judul &nbsp;&nbsp; &nbsp; :  <input type="text" [(ngModel)]="judul"/><br>
-    Isi &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : <input type="text" [(ngModel)]="isi"/><br>
-    Tanggal : <input type="date" [(ngModel)]="tanggal"/>
+    Judul &nbsp;&nbsp; &nbsp; :  <input type="text" [(ngModel)]="iJudul"/><br>
+    Isi &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : <input type="text" [(ngModel)]="iIsi"/><br>
+    Tanggal : <input type="date" [(ngModel)]="iTanggal"/>
   <br><br>
   <button (click)="ADDNOTE()">ADD NOTE</button>
-  <router-outlet></router-outlet>
-</p>
+
+
+  <table border="1" style="width:100%;">
+  <tr>
+    <th>Judul</th>
+    <th>Isi</th>
+    <th>Tanggal</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let juduls of judul; let i = index">
+    <td>judul[i]</td>
+    <td>isi[i]</td>
+    <td>tanggal[i]</td>
+    <td></td>
+  </tr>
+
+</table>
+  
+
+  <!--<router-outlet></router-outlet>-->
+
 
