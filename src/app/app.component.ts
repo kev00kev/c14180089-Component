@@ -1,4 +1,5 @@
 import { Component, VERSION } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'my-app',
@@ -6,5 +7,15 @@ import { Component, VERSION } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  name = 'Angular ' + VERSION.major;
+  name = ', Start to add note';
+  constructor(
+    private router : Router
+  ){}
+  judul = "";
+  isi = "";
+  tanggal = "";
+ 
+  ADDNOTE(){
+     this.router.navigate(["/halaman2"]);
+  }
 }

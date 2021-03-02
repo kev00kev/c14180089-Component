@@ -1,4 +1,11 @@
 <hello name="{{ name }}"></hello>
 <p>
-  Start editing to see some magic happen :)
+  <br>
+    Judul &nbsp;&nbsp; &nbsp; :  <input type="text" [(ngModel)]="judul"/><br>
+    Isi &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : <input type="text" [(ngModel)]="isi"/><br>
+    Tanggal : <input type="date" [(ngModel)]="tanggal"/>
+  <br><br>
+  <button (click)="ADDNOTE()">ADD NOTE</button>
+  <router-outlet></router-outlet>
 </p>
+
